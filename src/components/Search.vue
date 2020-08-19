@@ -1,5 +1,6 @@
 <template>
   <div>
+      <h3>Cantidad de Juegos disponibles {{games.length}}</h3>
     <input type="text" v-model="search" placeholder="Buscar">
     <GameList :games='filterGames'/>
   </div>
