@@ -16,7 +16,13 @@ const store = new Vuex.Store({
       { sku: '0006', name: 'Forza Horizon 4', stock: 100, price: 20000, color: 'red', onSale: true }
     ]
   },
-  getters: {},
+  getters: {
+    findGame: (state) => (sku) => {
+      return state.games.filter(prod => {
+        return prod.sku == sku
+      })
+    }
+  },
   mutations: {},
   actions: {}
 });

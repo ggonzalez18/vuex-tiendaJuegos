@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li :style="{'background-color':game.color}" v-for="(game, index) in games" :key="index"> Cod.: {{game.sku}} - Nombre del Juego: {{game.name}} - Valor: $ {{game.price}}</li>
+      <li :style="{'background-color':game.color}" v-for="(game, index) in games" :key="index"><b> Cod.:</b> {{game.sku}} - <b>Nombre del Juego:</b> {{game.name}} - <b>stock:</b> {{game.stock}} <b>Valor:</b> $ {{game.price}}</li>
     </ul>
   </div>
 </template>

@@ -1,20 +1,43 @@
 <template>
   <div>
-    <GameList :games='games'/>
+    <input type="text" v-model="search" placeholder="Buscar">
+    <GameList :games='filterGames'/>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import GameList from './GameList'
 
 export default {
+  data() {
+    return {
+      search: null,
+    }
+  },
   components: {
     GameList
   },
   computed: {
-    ...mapState(["games"])
+    ...mapState(["games"]),
+    ...mapGetters(["findGame"]),
+  filterGames() {
+    if (this.search) {
+      return this.findGame(this.search)
+    } else {
+      return this.games
+    }
+  }
   }
 }
 
 </script>
+
+<style>
+
+input {
+  font-size: 20px;
+  padding: 5px 2px;
+  margin: 10px auto;
+}
+</style>
