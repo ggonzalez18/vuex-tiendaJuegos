@@ -21,6 +21,11 @@ const store = new Vuex.Store({
       return state.games.filter(prod => {
         return prod.sku == sku
       })
+    },
+    availableGames(state) { 
+      return state.games.filter((game) => {
+        return game.stock > 0
+      })
     }
   },
   mutations: {},

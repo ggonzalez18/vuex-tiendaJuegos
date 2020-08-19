@@ -4,7 +4,8 @@
     <nav>
     <ul>
       <li><router-link :to="{name: 'Home'}">Inicio</router-link></li>
-      <li><router-link :to="{name: 'Search'}">Busqueda</router-link></li>
+      <li><router-link :to="{name: 'Search'}">Búsqueda</router-link></li>
+      <li><router-link :to="{name: 'Sales'}">Ventas</router-link></li>
     </ul></nav>
     <transition name="vista">
       <router-view></router-view>
