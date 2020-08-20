@@ -27,7 +27,7 @@ props: {
 }
 </script>
 
-<style>
+<style scoped>
 
 li {
   font-size: 20px;

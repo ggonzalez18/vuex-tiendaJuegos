@@ -6,18 +6,19 @@ import Router from 'vue-router'
 const Inicio = () => import('./components/Inicio')
 const Search = () => import('./components/Search')
 const Sales = () => import('./components/Sales')
+const TotalSale = () => import('./components/TotalSale')
 
 
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history', 
+    mode: 'history',
     routes: [
         {
             path: '/',
             name: 'Home',
             component: Inicio
-        },  
+        },
         {
             path: '/search',
             name: 'Search',
@@ -27,6 +28,11 @@ export default new Router({
             path: '/ventas',
             name: 'Sales',
             component: Sales
-        }  
+        },
+        {
+            path: '/total',
+            name: 'TotalSale',
+            component: TotalSale
+        } 
     ]
 })
