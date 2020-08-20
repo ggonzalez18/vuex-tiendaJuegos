@@ -1,13 +1,14 @@
 <template>
   <div>
-    <GameList :games='availableGames' :displayButton="true"/>
+     <h2>Cantidad de Juegos disponibles {{availableGames.length}}</h2>
+    <GameList :games='availableGames' :displayButton="true" @emit-sale="initSale"/>
   </div>
 </template>
 
 <script>
 
 import GameList from './GameList.vue'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -15,18 +16,13 @@ export default {
   },
   computed: {
     ...mapGetters (['availableGames'])
+  },
+  methods: {
+    ...mapActions(['processSale']),
+    initSale(game) {
+      this.processSale(game)
+    },
+    
   }
 }
 </script>
-
-<style>
-button {
-  border: 1px solid;
-    padding: .325rem .72rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    cursor: pointer;
-    margin-left: 20px;
-}
-</style>

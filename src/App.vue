@@ -36,14 +36,28 @@ background-color: #333333;
 }
 
 li {
- float: left;
+float: left;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
 }
  
 li a {
- display: block;
- color: white;
- text-align: center;
- padding: 16px;
- text-decoration: none;
+    font-size: 20px;
+display: block;
+color: white;
+text-align: center;
+padding: 15px;
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  font-size: 20px;
+  padding: 5px 2px;
+  margin: 10px auto;
 }
 </style>

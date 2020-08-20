@@ -1,7 +1,7 @@
 <template>
   <div>
-      <h3>Cantidad de Juegos disponibles {{games.length}}</h3>
-    <input type="text" v-model="search" placeholder="Buscar">
+      <h2>Cantidad de Juegos disponibles {{games.length}}</h2>
+    <input type="text" v-model="search" placeholder="Busca el SKU de tu juego">
     <GameList :games='filterGames'/>
   </div>
 </template>
@@ -31,11 +31,9 @@ export default {
   }
   }
 }
-
 </script>
 
 <style>
-
 input {
   font-size: 20px;
   padding: 5px 2px;
